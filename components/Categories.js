@@ -38,7 +38,6 @@ const CategoryContainer = styled.div`
     flex-direction: row;
     width: 87%;
     text-decoration: none;
-    padding: 15px
     margin: 20px;
     position: relative;
     margin: auto;
@@ -48,11 +47,11 @@ const CategoryContainer = styled.div`
     backdrop-filter: blur( 2.5px );
     -webkit-backdrop-filter: blur( 2.5px );
     border-radius: 18px;
-    margin-bottom: 70px;
     @media screen and (max-width: 1050px) {
         flex-direction: column;
-        width: 90%;
         justify-content: center
+        position: absolute;
+        padding-top: 50px;
        }
     }
 `
@@ -60,10 +59,9 @@ const CategoryContainer = styled.div`
 const CategoryBox = styled.div`
     display: flex;
     flex-direction: row;
-    background-color: #071315;
+    background-color: #211B26;
     width: 30%;
     text-decoration: none;
-    padding: 15px
     margin: 20px;
     position: relative;
     margin: auto;
@@ -71,19 +69,26 @@ const CategoryBox = styled.div`
     text-align: center;
     justify-content: center;
     border-radius: 8px;
-    margin-bottom: 70px;
     color: white;
     font-size: 20px;
     font-family: 'Encode Sans SC', sans-serif;
     @media screen and (max-width: 1050px) {
         flex-direction: column;
         width: 90%;
+        background: none;
+        justify-content: center;
+        margin-bottom: 70px;
+       }
+       @media screen and (max-width: 550px) {
+        flex-direction: column;
+        width: 100%;
         justify-content: center
        }
     }
 `
 const CatTitle = styled.div`
     display: flex;
+    background-color: #211B26;
     flex-direction: row;
     text-decoration: none;
     color: white;
@@ -99,13 +104,18 @@ const CatTitle = styled.div`
     }
 `
 const CatLink = styled.a`
-    margin: 10px;
     text-decoration: none !important; 
+    background-color: #211B26;
+    border-radius: 8px;
 `
 
 const CatImage = styled.img`
-    border-radius: 4px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     text-decoration: none;
+    @media screen and (max-width: 1050px) {
+        justify-content: center
+       }
 `
 
 

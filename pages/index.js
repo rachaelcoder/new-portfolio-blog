@@ -5,7 +5,6 @@ import Categories from "../components/Categories"
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import styled from '@emotion/styled'
-import Link from "next/link";
 import { fetchAPI } from "../lib/api";
 
 const Home = ({ articles, categories, homepage }) => {
@@ -34,26 +33,7 @@ const Home = ({ articles, categories, homepage }) => {
 
       <Seo seo={homepage.attributes.seo} />
       <div className="black-hole uk-section">
-        <Categories>
-
-        </Categories>
-{/* 
-      <Box>
-        <a href={`/category/tech`}>
-          Tech
-        </a>
-      </Box>
-      <Box>
-        <a href={`/category/design`}>
-          Design
-        </a>
-      </Box>
-      <Box>
-        <a href={`/category/random`}>
-          Random
-        </a>
-        
-      </Box> */}
+        <Categories/>
       </div>
       <FormBox>
         <SubscribeForm /> 
@@ -135,8 +115,7 @@ const LeftScreen = styled.div`
   @media screen and (max-width: 1050px) {
     margin-left: 0px;
     margin-right: 0px;
-    width: 100%;
-    height: auto;
+    width: 55%;
     margin-bottom: 90px;
    }
 `
@@ -176,6 +155,7 @@ const MainText = styled.div`
     font-family: 'M PLUS Code Latin', sans-serif;
     @media screen and (max-width: 1050px) {
       position: relative;
+      font-size: 26px;
   }
 `
 
